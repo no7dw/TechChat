@@ -1,11 +1,12 @@
 {
   "name": "TechChat",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "The chat app for Technician and software designer",
   "keywords": [
     "chat",
-    "group chat"
+    "group chat",
+    "sails"
   ],
   "dependencies": {
     "sails": "~0.10.5",
@@ -26,6 +27,12 @@
     "grunt-contrib-less": "0.11.1",
     "grunt-contrib-coffee": "~0.10.1"
   },
+  "devDependencies": {
+    "grunt-jsdoc-plugin": "^0.1.4",
+    "barrels": "^1.4.0",
+    "mocha": "*",
+    "should": "*"
+  },
   "scripts": {
     "start": "node app.js",
     "debug": "node debug app.js"
@@ -36,5 +43,9 @@
     "url": "https://github.com/leoliew/TechChat.git"
   },
   "author": "leo",
-  "license": ""
+  "license": "",
+  "engines": {
+    "node": "0.10.35",
+    "npm": "2.6.1"
+  }
 }
