@@ -5,7 +5,7 @@ The chat app for Technician and software designer
 
 
 ## Clone
-Clone the project from gitlab
+Clone the project from github
 
     git clone https://github.com/leoliew/TechChat
 
@@ -13,6 +13,10 @@ Clone the project from gitlab
 从官方源安装依赖模块
 
     npm install
+    
+从国内源安装依赖模块
+
+    make install
 
 ## Test
 sails测试环境构建文件
@@ -42,11 +46,11 @@ sails测试环境构建文件
 ## 定时任务
 定时任务初始化配置
 
-   TechChat/config/bootstrap.js
+> TechChat/config/bootstrap.js
 
 定时任务时间以及执行内容配置
 
-    TechChat/config/crontab.js
+> TechChat/config/crontab.js
 
 ## deploy
 deploy脚本位置
