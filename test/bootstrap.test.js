@@ -43,7 +43,9 @@ before(function (done) {
 // Global after hook
 after(function (done) {
   sails.log.verbose(); // Skip a line before displaying Sails lowering logs
-  sails.lower(done);
+  sails.lower(function() {
+    done();
+  });
 });
 
 
