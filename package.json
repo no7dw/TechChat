@@ -1,12 +1,14 @@
 {
   "name": "TechChat",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "The chat app for Technician and software designer",
   "keywords": [
     "chat",
     "group chat",
-    "sails"
+    "sails",
+    "starter app",
+    "sensible defaults"
   ],
   "dependencies": {
     "ejs": "~0.8.4",
@@ -29,6 +31,8 @@
     "superagent": "^1.1.0"
   },
   "devDependencies": {
+    "istanbul": "^0.3.6",
+    "grunt-mocha-istanbul": "^2.2.0",
     "grunt-jsdoc-plugin": "^0.1.4",
     "barrels": "^1.4.0",
     "mocha": "*",

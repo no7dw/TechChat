@@ -19,6 +19,14 @@ Clone the project from github
     make install
 
 ## Test
+运行测试用例
+
+    make test
+
+运行测试用例并生成Unit Test的覆盖率（运行结束后会在coverage目录下生成覆盖率报告）
+
+    make coverage
+
 sails测试环境构建文件
 
     test/bootstrap.test.js
@@ -35,13 +43,7 @@ sails测试环境构建文件
 
 > >   `scene`  场景测试目录
 
-运行测试用例
 
-    make test
-
-运行测试用例并生成Unit Test的覆盖率（运行结束后会在coverage目录下生成覆盖率报告）
-
-    make coverage
 
 ## 定时任务
 定时任务初始化配置
