@@ -5,7 +5,7 @@
 [![gitter][gitter-image]][gitter-url]
 
 [travis-image]: https://api.travis-ci.org/leoliew/TechChat.svg?branch=master
-[travis-url]: https://travis-ci.org/leoliew/TechChat.svg
+[travis-url]: https://travis-ci.org/leoliew/TechChat
 [coveralls-image]: https://coveralls.io/repos/leoliew/TechChat/badge.svg
 [coveralls-url]: https://coveralls.io/r/leoliew/TechChat
 [gitter-image]: https://badges.gitter.im/Join%20Chat.svg
