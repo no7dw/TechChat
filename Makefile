@@ -13,6 +13,13 @@ test:
 coverage:
 	NODE_ENV=TEST grunt coverage
 
-.PHONY: install test coverage
+test-travis:
+	@NODE_ENV=TEST
+		node_modules/.bin/istanbul cover --preserve-comments \
+		node_modules/.bin/_mocha \
+		    $(MOCHA_OPTS) \
+		    $(TESTS)
+
+.PHONY: install test coverage test-travis
 
 
