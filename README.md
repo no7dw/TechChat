@@ -7,7 +7,7 @@
 [travis-image]: https://api.travis-ci.org/leoliew/TechChat.svg?branch=master
 [travis-url]: https://travis-ci.org/leoliew/TechChat
 [coveralls-image]: https://coveralls.io/repos/leoliew/TechChat/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/r/leoliew/TechChat?branch=master
+[coveralls-url]: https://coveralls.io/r/leoliew/TechChat
 [gitter-image]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/leoliew/TechChat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
@@ -105,13 +105,15 @@ response数据
 
 ![develop flow](http://image.beekka.com/blog/201207/bg2012070507.png)
 
-  * 1.从master分支分出功能分支（可以采用feature-*的形式命名）
+  * 1.从此项目 fork 到个人项目
+  
+  * 2.从master分支分出功能分支（可以采用feature-*的形式命名）
 
         git checkout -b feature-x master
 
-  * 2.开发完成后，申请合并到master分支
+  * 3.开发完成后，申请合并到master分支
 
-  * 3.删除feature分支
+  * 4.删除feature分支
 
         git branch -d feature-x
 

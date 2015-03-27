@@ -11,7 +11,8 @@ describe("serverError Response test !", function() {
     it("should response serverError view !", function(done) {
       request.get(sails.getBaseurl()+"/response/serverError")
         .end(function(err,res){
-          res.text.should.match(/Server Error/);
+          console.log(res.text)
+          res.text.should.match(/E_VIEW_FAILED/);
           done() ;
         }) ;
     });

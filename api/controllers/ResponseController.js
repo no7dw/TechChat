@@ -21,7 +21,7 @@ module.exports = {
     res.ok();
   },
   serverError:function(req,res){
-    res.serverError();
+    res.serverError({code:'E_VIEW_FAILED'});
   },
   sessionAuth:function(req,res){
     res.ok();
