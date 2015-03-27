@@ -1,6 +1,13 @@
 # TechChat
 
-[![Join the chat at https://gitter.im/leoliew/TechChat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/leoliew/TechChat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![build status][travis-image]][travis-url]
+[![gitter][gitter-image]][gitter-url]
+
+
+[travis-image]: https://img.shields.io/travis/cnpm/cnpmjs.org.svg?style=flat-square
+[travis-url]: https://travis-ci.org/cnpm/cnpmjs.org
+[gitter-image]: https://badges.gitter.im/Join%20Chat.svg
+[gitter-url]: https://gitter.im/leoliew/TechChat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
 The chat app for Technician and software designer
 
