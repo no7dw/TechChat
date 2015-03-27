@@ -4,7 +4,7 @@
 
 
 /**
- * response type test
+ * response type Test and police Test Controller
  * @type {{badRequset: badRequset, forbidden: forbidden, notFound: notFound, ok: ok, serverError: serverError}}
  */
 module.exports = {
@@ -22,5 +22,8 @@ module.exports = {
   },
   serverError:function(req,res){
     res.serverError();
+  },
+  sessionAuth:function(req,res){
+    res.ok();
   }
 };
