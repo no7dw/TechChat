@@ -1,11 +1,13 @@
 # TechChat
 
 [![build status][travis-image]][travis-url]
+[![Coverage Status][coveralls-image]][coveralls-url]
 [![gitter][gitter-image]][gitter-url]
-
 
 [travis-image]: https://api.travis-ci.org/leoliew/TechChat.svg?branch=master
 [travis-url]: https://travis-ci.org/leoliew/TechChat.svg
+[coveralls-image]: https://coveralls.io/repos/leoliew/TechChat/badge.svg
+[coveralls-url]: https://coveralls.io/r/leoliew/TechChat
 [gitter-image]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/leoliew/TechChat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
