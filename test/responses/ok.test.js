@@ -9,7 +9,7 @@ var request = require('superagent');
 describe("ok Response test !", function() {
   describe("test ok request !", function() {
     it("should response ok view !", function(done) {
-      request.get(sails.getBaseurl()+"/response/ok")
+      request.get(sails.getBaseurl()+"/api/v1/response/ok")
         .end(function(err,res){
           res.text.should.match(/OK/);
           done() ;

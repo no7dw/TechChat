@@ -21,7 +21,7 @@ before(function (done) {
       level: 'error'
     },
     models: {
-      //connection: 'testMongodb',
+      connection: 'localDiskDb',
       migrate: 'drop'
     }
   }, function(err, sails) {

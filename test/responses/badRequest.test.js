@@ -8,7 +8,7 @@ var request = require('superagent');
 describe("badRequest Response test !", function() {
   describe("test bad request !", function() {
     it("should response bad request view !", function(done) {
-      request.get(sails.getBaseurl()+"/response/badRequset")
+      request.get(sails.getBaseurl()+"/api/v1/response/badRequset")
         .end(function(err,res){
           res.text.should.match(/Bad Request/);
           done();

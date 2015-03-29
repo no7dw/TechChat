@@ -21,6 +21,8 @@
 
 module.exports.connections = {
 
+  default: 'betaMongodb',
+
   /***************************************************************************
   *                                                                          *
   * Local disk storage for DEVELOPMENT ONLY                                  *
@@ -40,13 +42,13 @@ module.exports.connections = {
   * Run: npm install sails-mysql                                             *
   *                                                                          *
   ***************************************************************************/
-  someMysqlServer: {
-    adapter: 'sails-mysql',
-    host: 'YOUR_MYSQL_SERVER_HOSTNAME_OR_IP_ADDRESS',
-    user: 'YOUR_MYSQL_USER',
-    password: 'YOUR_MYSQL_PASSWORD',
-    database: 'YOUR_MYSQL_DB'
-  },
+  //someMysqlServer: {
+  //  adapter: 'sails-mysql',
+  //  host: 'YOUR_MYSQL_SERVER_HOSTNAME_OR_IP_ADDRESS',
+  //  user: 'YOUR_MYSQL_USER',
+  //  password: 'YOUR_MYSQL_PASSWORD',
+  //  database: 'YOUR_MYSQL_DB'
+  //},
 
   /***************************************************************************
   *                                                                          *
@@ -56,14 +58,23 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-  someMongodbServer: {
-    adapter: 'sails-mongo',
-    host: 'localhost',
-    port: 27017,
-    // user: 'username',
-    // password: 'password',
-    // database: 'your_mongo_db_name_here'
+  betaMongodb: {
+    module: 'sails-mongo',
+    host: process.env.MONGO_HOST  || 'aliyun',
+    port: process.env.MONGO_PORT  || 27000,
+    user: process.env.MONGO_HOST  || '',
+    password: process.env.MONGO_HOST  || '',
+    database: process.env.MONGO_DBNAME || 'beta_techchat'
   },
+
+  prodMongodb: {
+    module: 'sails-mongo',
+    host: process.env.MONGO_HOST  || 'aliyun',
+    port: process.env.MONGO_PORT  || 27000,
+    user: process.env.MONGO_USER  || '',
+    password: process.env.MONGO_PASSWORD  || '',
+    database: process.env.MONGO_DBNAME || 'techchat'
+  }
 
   /***************************************************************************
   *                                                                          *
@@ -74,13 +85,13 @@ module.exports.connections = {
   *                                                                          *
   *                                                                          *
   ***************************************************************************/
-  somePostgresqlServer: {
-    adapter: 'sails-postgresql',
-    host: 'YOUR_POSTGRES_SERVER_HOSTNAME_OR_IP_ADDRESS',
-    user: 'YOUR_POSTGRES_USER',
-    password: 'YOUR_POSTGRES_PASSWORD',
-    database: 'YOUR_POSTGRES_DB'
-  }
+  //somePostgresqlServer: {
+  //  adapter: 'sails-postgresql',
+  //  host: 'YOUR_POSTGRES_SERVER_HOSTNAME_OR_IP_ADDRESS',
+  //  user: 'YOUR_POSTGRES_USER',
+  //  password: 'YOUR_POSTGRES_PASSWORD',
+  //  database: 'YOUR_POSTGRES_DB'
+  //}
 
 
   /***************************************************************************
