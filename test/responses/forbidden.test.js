@@ -9,7 +9,7 @@ var request = require('superagent');
 describe("forbidden Response test !", function() {
   describe("test forbidden request !", function() {
     it("should response forbidden view !", function(done) {
-      request.get(sails.getBaseurl()+"/response/forbidden")
+      request.get(sails.getBaseurl()+"/api/v1/response/forbidden")
         .end(function(err,res){
           res.text.should.match(/Forbidden/);
           done() ;

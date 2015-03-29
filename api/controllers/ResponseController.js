@@ -25,5 +25,12 @@ module.exports = {
   },
   sessionAuth:function(req,res){
     res.ok();
-  }
+  },
+
+  /**
+   * Overrides for the settings in `config/controllers.js`
+   * (specific to UserController)
+   */
+  _config: {}
+
 };
