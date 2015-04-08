@@ -21,7 +21,7 @@ module.exports.http = {
   *                                                                           *
   ****************************************************************************/
 
-  // middleware: {
+  middleware: {
 
   /***************************************************************************
   *                                                                          *
@@ -30,23 +30,23 @@ module.exports.http = {
   *                                                                          *
   ***************************************************************************/
 
-    // order: [
-    //   'startRequestTimer',
-    //   'cookieParser',
-    //   'session',
-    //   'myRequestLogger',
-    //   'bodyParser',
-    //   'handleBodyParserError',
-    //   'compress',
-    //   'methodOverride',
-    //   'poweredBy',
-    //   '$custom',
-    //   'router',
-    //   'www',
-    //   'favicon',
-    //   '404',
-    //   '500'
-    // ],
+    order: [
+       'startRequestTimer',
+       'cookieParser',
+       'session',
+       'myRequestLogger',
+       'bodyParser',
+       'handleBodyParserError',
+       'compress',
+       'methodOverride',
+       'poweredBy',
+       '$custom',
+       'router',
+       'www',
+       'favicon',
+       '404',
+       '500'
+    ],
 
   /****************************************************************************
   *                                                                           *
@@ -54,10 +54,27 @@ module.exports.http = {
   *                                                                           *
   ****************************************************************************/
 
-    // myRequestLogger: function (req, res, next) {
-    //     console.log("Requested :: ", req.method, req.url);
-    //     return next();
-    // }
+    myRequestLogger: function (req, res, next) {
+      req.on("end", function() {
+        len = parseInt(res.getHeader('Content-Length'), 10);
+        if(isNaN(len)){
+          len = -1;
+        }else{
+          len = require('bytes')(len);
+        }
+        line = req.headers['user-agent'] + '\" \"referer:' + (req.headers['referer'] || req.headers['referrer'] || '') + '\" \"' + (req.headers['x-forwarded-for'] || req.ip || (req.socket && req.socket.socket && req.socket.socket.remoteAddress) || req.socket.remoteAddress) + ' ' + req.method + ' ' + (req.originalUrl || req.url) + ' HTTP/' + req.httpVersionMajor + '.' + req.httpVersionMinor + ' ' + res.statusCode + '\" response size : ' + len + ' need time ' + (new Date() - req._startTime) + 'ms.';
+        if(res.statusCode >=500){
+          sails.log.error(line);
+        }else if(res.statusCode >= 400){
+          sails.log.error(line);
+        }else if(res.statusCode >= 300){
+          sails.log.info(line);
+        }else {
+          sails.log.info(line);
+        }
+      });
+      return next();
+    }
 
 
   /***************************************************************************
@@ -71,7 +88,7 @@ module.exports.http = {
 
     // bodyParser: require('skipper')
 
-  // },
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -83,5 +100,5 @@ module.exports.http = {
   *                                                                          *
   ***************************************************************************/
 
-  // cache: 31557600000
+  cache: 60*60*2
 };
