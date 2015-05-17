@@ -20,16 +20,16 @@ The chat app for Technician and software designer
 
 
 ## Clone
-Clone the project from github
+Clone the project from **github**
 
     git clone https://github.com/leoliew/TechChat
 
 ## Install
-从官方源安装依赖模块
+从**官方**源安装依赖模块
 
     npm install
     
-从国内源安装依赖模块
+从国**内源**安装依赖模块
 
     make install
 
@@ -38,7 +38,7 @@ Clone the project from github
 
     make test
 
-运行测试用例并生成Unit Test的覆盖率（运行结束后会在coverage目录下生成覆盖率报告）
+运行测试用例并生成Unit Test的覆盖率（运行结束后会在`coverage`目录下生成覆盖率报告）
 
     make coverage
 
@@ -49,8 +49,8 @@ sails测试环境构建文件
 测试用例目录结构
 
 > `test` 测试文件存放目录(主要测试api目录下的所有文件)
-> > `Controllers` Controllers测试文件夹，测试对应Controllers文件夹下的所有内容
-> > >   `UserControllers.test.js`  Test UserControllers.js
+> > `Controllers` Controllers测试文件夹，测试对应`Controllers`文件夹下的所有内容
+> > >   `UserControllers.test.js`  Test `UserControllers.js`
 
 > >  `models`
 
@@ -108,15 +108,15 @@ response数据
 
 ![develop flow](http://image.beekka.com/blog/201207/bg2012070507.png)
 
-  * 1.从此项目 fork 到个人项目
+  * 1.从此项目 `fork` 到个人项目
   
-  * 2.从master分支分出功能分支（可以采用feature-*的形式命名）
+  * 2.从`master`分支分出功能分支（可以采用`feature-*`的形式命名）
 
         git checkout -b feature-x master
 
-  * 3.开发完成后，申请合并到master分支
+  * 3.开发完成后，申请合并到`master`分支
 
-  * 4.删除feature分支
+  * 4.删除`feature`分支
 
         git branch -d feature-x
 
