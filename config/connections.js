@@ -67,6 +67,16 @@ module.exports.connections = {
     user: process.env.MONGO_USER  || '',
     password: process.env.MONGO_PASSWORD  || '',
     database: process.env.MONGO_DBNAME || 'beta_techchat'
+  },
+
+
+  testMongodb: {
+    module: 'sails-mongo',
+    host:process.env.MONGO_HOST  || '192.168.0.254',
+    port: process.env.MONGO_PORT  || 27017,
+    user: '',
+    password: '',
+    database: 'TestDB'
   }
 
   /***************************************************************************

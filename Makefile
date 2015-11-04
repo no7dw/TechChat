@@ -7,7 +7,7 @@ install:
 	@npm install $(NPM_REGISTRY)
 
 test:
-	NODE_ENV=TEST ./node_modules/.bin/mocha \
+	NODE_ENV=unit_test ./node_modules/.bin/mocha \
 		$(TESTS)
 
 coverage:
