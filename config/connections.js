@@ -58,22 +58,15 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-  betaMongodb: {
-    module: 'sails-mongo',
-    host: process.env.MONGO_HOST  || 'aliyun',
-    port: process.env.MONGO_PORT  || 27000,
-    user: process.env.MONGO_HOST  || '',
-    password: process.env.MONGO_HOST  || '',
-    database: process.env.MONGO_DBNAME || 'beta_techchat'
-  },
 
-  prodMongodb: {
+
+  mongodbServer: {
     module: 'sails-mongo',
-    host: process.env.MONGO_HOST  || 'aliyun',
+    host:process.env.MONGO_HOST  || 'aliyun',
     port: process.env.MONGO_PORT  || 27000,
     user: process.env.MONGO_USER  || '',
     password: process.env.MONGO_PASSWORD  || '',
-    database: process.env.MONGO_DBNAME || 'techchat'
+    database: process.env.MONGO_DBNAME || 'beta_techchat'
   }
 
   /***************************************************************************
